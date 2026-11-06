@@ -1,0 +1,37 @@
+public class MatrixAddition {
+    public static void main(String[] args) {
+        // Predefined 2D arrays (matrices)
+        int[][] matrixA = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+        
+        int[][] matrixB = {
+            {7, 8, 9},
+            {1, 2, 3}
+        };
+
+        // Get dimensions (Rows and Columns)
+        int rows = matrixA.length;
+        int cols = matrixA[0].length;
+
+        // Resultant matrix to store the sum
+        int[][] sumMatrix = new int[rows][cols];
+
+        // Adding corresponding elements using nested loops
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                sumMatrix[i][j] = matrixA[i][j] + matrixB[i][j];
+            }
+        }
+
+        // Display the resultant matrix
+        System.out.println("Resultant Matrix (A + B):");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(sumMatrix[i][j] + " ");
+            }
+            System.out.println(); // New line after each row
+        }
+    }
+}
